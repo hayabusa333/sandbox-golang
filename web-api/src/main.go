@@ -12,8 +12,8 @@ func main() {
 	// 単純なハンドラ
 	r.HandleFunc("/", EchoHandler)
 
-        // 死活監視
-        r.HandleFunc("/heartbeat", HearthbeatHandler)
+	// 死活監視
+	r.HandleFunc("/heartbeat", HearthbeatHandler)
 
 	// サービスを起動する
 	http.ListenAndServe(":8080", r)
