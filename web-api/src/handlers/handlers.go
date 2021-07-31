@@ -9,6 +9,9 @@ import (
 func Router() *mux.Router {
         r := mux.NewRouter()
 
+	// トップページ
+	r.HandleFunc("/", Home)
+
         // 死活監視
         r.HandleFunc("/heartbeat", HearthbeatHandler)
 
