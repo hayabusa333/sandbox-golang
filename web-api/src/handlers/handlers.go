@@ -15,6 +15,9 @@ func Router() *mux.Router {
         // 死活監視
         r.HandleFunc("/heartbeat", HearthbeatHandler)
 
+	// Jsonを返す
+	r.HandleFunc("/items", GetAllItems).Methods("GET")
+
         return r
 }
 
