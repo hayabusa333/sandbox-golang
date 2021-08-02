@@ -18,6 +18,9 @@ func Router() *mux.Router {
 	// Jsonを返す
 	r.HandleFunc("/items", GetAllItems).Methods("GET")
 
+	// callback によりリダイレクトする
+	r.HandleFunc("/callback", LoginCallback)
+
         return r
 }
 
